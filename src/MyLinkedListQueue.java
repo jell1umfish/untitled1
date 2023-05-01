@@ -6,5 +6,7 @@ public class MyLinkedListQueue<T> {
     public MyLinkedListQueue() {
         list = new ArrayList<>();
     }
-
+    public void enqueue(T data) {
+        list.add(data);
+    }
 }
