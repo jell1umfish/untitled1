@@ -6,5 +6,10 @@ public class MyArrayListStack<T> {
     public MyArrayListStack() {
         list = new ArrayList<>();
     }
-
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
+    public void push(T data) {
+        list.add(data);
+    }
 }
