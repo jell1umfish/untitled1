@@ -12,4 +12,12 @@ public class MyArrayListStack<T> {
     public void push(T data) {
         list.add(data);
     }
+    public T pop() {
+        if (isEmpty()) {
+            throw new RuntimeException("Stack is empty");
+        }
+        return list.remove(list.size() - 1);
+    }
+
+
 }
