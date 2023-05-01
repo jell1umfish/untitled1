@@ -9,4 +9,7 @@ public class MyArrayListQueue<T> {
     public void enqueue(T data) {
         list.add(data);
     }
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
 }
