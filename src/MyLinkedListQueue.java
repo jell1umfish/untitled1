@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.NoSuchElementException;
 public class MyLinkedListQueue<T> {
-    private ArrayList<T> list;
+    private LinkedList<T> list;
 
     public MyLinkedListQueue() {
-        list = new ArrayList<>();
+        list = new LinkedList<>();
     }
     public void enqueue(T data) {
         list.add(data);
@@ -12,5 +12,10 @@ public class MyLinkedListQueue<T> {
     public boolean isEmpty() {
         return list.isEmpty();
     }
-
+    public T dequeue() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return list.removeFirst();
+    }
 }

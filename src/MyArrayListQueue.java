@@ -12,4 +12,5 @@ public class MyArrayListQueue<T> {
     public boolean isEmpty() {
         return list.isEmpty();
     }
+
 }
