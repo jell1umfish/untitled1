@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 public class MyArrayListQueue<T> {
     private ArrayList<T> list;
@@ -12,5 +13,10 @@ public class MyArrayListQueue<T> {
     public boolean isEmpty() {
         return list.isEmpty();
     }
-
+    public T dequeue() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return list.remove(0);
+    }
 }
